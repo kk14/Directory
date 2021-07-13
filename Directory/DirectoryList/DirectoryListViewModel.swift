@@ -8,44 +8,49 @@
 import Foundation
 
 class DirectoryListViewModel {
+    private let directoryListService: DirectoryListService
     
-    var employees = [Employee]()
+    let employeeDictionary: Observable<Dictionary<String, [Employee]>>
     
-    var employeeDictionary: [String: [Employee]] {
-        get {
-            var employeeDictionary = [String: [Employee]]()
-            for employee in employees {
-                let employeeKey = String(employee.firstName.prefix(1))
-                if var employeeValues = employeeDictionary[employeeKey] {
-                    employeeValues.append(employee)
-                    employeeDictionary[employeeKey] = employeeValues
-                } else {
-                    employeeDictionary[employeeKey] = [employee]
-                }
-            }
-            return employeeDictionary
+    var employees: [Employee]? {
+      didSet {
+        guard let value = employees else {
+          return
         }
+        updateObservables(employees: value)
+      }
+    }
+    init() {
+        self.directoryListService = DirectoryListServiceImplementation(api: API(urlSession: URLSession(configuration: URLSessionConfiguration.default), baseURL: URL(string: APPURL.interviewTest)!))
+        self.employeeDictionary = Observable<Dictionary<String, [Employee]>>(["howdy":[]])
+        getDirectoryList()
     }
     
-    //Convenience init
-    func initWithLocalData() -> DirectoryListViewModel {
-        let directoryListViewModel = DirectoryListViewModel()
-        let employees = self.loadLocalJson() ?? [Employee]()
-        self.employees = employees
-        return directoryListViewModel
+    private func updateObservables(employees: [Employee]) {
+        employeeDictionary.value = self.getEmployeeDictionary()
+    }
+    private func getDirectoryList() {
+        directoryListService.getDirectoryList { [weak self] result in
+        do {
+          self?.employees = try result.unwrapped()
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
     }
     
-    private func loadLocalJson() -> [Employee]? {
-        if let url = Bundle.main.url(forResource: "PeopleResponse", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let employees = try decoder.decode(Employees.self, from: data)
-                return employees
-            } catch {
-                print("error:\(error)")
+    private func getEmployeeDictionary() -> [String: [Employee]] {
+        var employeeDictionary = [String: [Employee]]()
+        
+        for employee in employees! {
+            let employeeKey = String(employee.firstName.prefix(1))
+            if var employeeValues = employeeDictionary[employeeKey] {
+                employeeValues.append(employee)
+                employeeDictionary[employeeKey] = employeeValues
+            } else {
+                employeeDictionary[employeeKey] = [employee]
             }
         }
-        return nil
+        return employeeDictionary
     }
 }

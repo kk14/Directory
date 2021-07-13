@@ -11,28 +11,31 @@ class DirectoryListViewController: UITableViewController {
     
     var employeeSectionTitles = [String]()
     var filteredEmployees = [Employee]()
+    var employeesDictionary = [String:[Employee]]()
     private var directoryListViewModel: DirectoryListViewModel!
 
     let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configureSearchController()
-        
         tableView.sectionIndexColor = .vmRed
         
         self.directoryListViewModel = DirectoryListViewModel()
-        
-        NetworkManager().fetchEmployees(completionHandler: { [weak self] (employees) in
-            self?.directoryListViewModel.employees = employees
-            DispatchQueue.main.async {
-                self?.employeeSectionTitles = self?.directoryListViewModel.employeeDictionary.keys.sorted(by: { $0 < $1 }) ?? [String]() as [String]
-                self?.tableView.reloadData()
-            }
-          })
+        bind()
+    }
+    deinit {
+        directoryListViewModel.employeeDictionary.unbind(self)
     }
 
+    private func bind() {
+        directoryListViewModel.employeeDictionary.bind(self) { [weak self] employeeDictionary in
+            self?.employeesDictionary = employeeDictionary
+            self?.employeeSectionTitles = self?.employeesDictionary.keys.sorted(by: { $0 < $1 }) ?? [String]() as [String]
+            self?.tableView.reloadData()
+            
+      }
+    }
     //MARK: -  Search Controller Utils
     
     func configureSearchController() {
@@ -50,10 +53,10 @@ class DirectoryListViewController: UITableViewController {
       return searchController.isActive && !isSearchBarEmpty
     }
     func filterContentForSearchText(_ searchText: String) {
-        filteredEmployees = directoryListViewModel.employees.filter { (employee: Employee) -> Bool in
+        filteredEmployees = directoryListViewModel.employees?.filter { (employee: Employee) -> Bool in
         
         return employee.firstName.lowercased().contains(searchText.lowercased()) || employee.lastName.lowercased().contains(searchText.lowercased())
-      }
+        } ?? []
       
       tableView.reloadData()
     }
@@ -72,7 +75,8 @@ class DirectoryListViewController: UITableViewController {
           return filteredEmployees.count
         }
         let employeeKey = employeeSectionTitles[section]
-        if let employeeValues = directoryListViewModel.employeeDictionary[employeeKey] {
+        
+        if let employeeValues = self.employeesDictionary[employeeKey] {
             return employeeValues.count
         }
         
@@ -89,7 +93,7 @@ class DirectoryListViewController: UITableViewController {
             cell.textLabel?.text = employee.firstName + " " + employee.lastName
         } else {
             let employeeKey = employeeSectionTitles[indexPath.section]
-            if let employeeValues = directoryListViewModel.employeeDictionary[employeeKey] {
+            if let employeeValues = self.employeesDictionary[employeeKey]{
                 employee = employeeValues[indexPath.row]
                 cell.textLabel?.text = employee.firstName + " " + employee.lastName
             }
@@ -113,7 +117,7 @@ class DirectoryListViewController: UITableViewController {
             let employeeKeyIndex = tableView.indexPathForSelectedRow?.section,
             let employeeIndex = tableView.indexPathForSelectedRow?.row {
                 let employeeKey = employeeSectionTitles[employeeKeyIndex]
-            if let employeeValues = directoryListViewModel.employeeDictionary[employeeKey] {
+            if let employeeValues = self.employeesDictionary[employeeKey] {
                     destination.employeeDetailsVM = EmployeeDetailViewModel(withEmployee: employeeValues[employeeIndex])
                 }
             }

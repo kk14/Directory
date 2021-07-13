@@ -19,8 +19,8 @@
 		DA5EB5A32693D01100D71518 /* RoomsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5EB5A12693D01100D71518 /* RoomsResponse.json */; };
 		DA5EB5A72695141A00D71518 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A62695141A00D71518 /* RoomListViewController.swift */; };
 		DA5EB5A82695141A00D71518 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A62695141A00D71518 /* RoomListViewController.swift */; };
-		DA5EB5AA2695149E00D71518 /* RoomsListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A92695149E00D71518 /* RoomsListViewModal.swift */; };
-		DA5EB5AB2695149E00D71518 /* RoomsListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A92695149E00D71518 /* RoomsListViewModal.swift */; };
+		DA5EB5AA2695149E00D71518 /* RoomsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A92695149E00D71518 /* RoomsListViewModel.swift */; };
+		DA5EB5AB2695149E00D71518 /* RoomsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5A92695149E00D71518 /* RoomsListViewModel.swift */; };
 		DA5EB5B1269522A800D71518 /* EmployeeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5B0269522A800D71518 /* EmployeeDetailsTableViewController.swift */; };
 		DA5EB5B2269522A800D71518 /* EmployeeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5B0269522A800D71518 /* EmployeeDetailsTableViewController.swift */; };
 		DA5EB5B52695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5B32695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift */; };
@@ -31,21 +31,16 @@
 		DA5EB5BB2695273000D71518 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5B92695273000D71518 /* UIView+Constraints.swift */; };
 		DA5EB5BD26952FEA00D71518 /* EmployeeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5BC26952FEA00D71518 /* EmployeeDetailViewModel.swift */; };
 		DA5EB5BE26952FEA00D71518 /* EmployeeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5BC26952FEA00D71518 /* EmployeeDetailViewModel.swift */; };
-		DA5EB5C02697B48E00D71518 /* UIImageView+ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5BF2697B48E00D71518 /* UIImageView+ImageDownload.swift */; };
-		DA5EB5C12697B48E00D71518 /* UIImageView+ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5BF2697B48E00D71518 /* UIImageView+ImageDownload.swift */; };
 		DA5EB5C32697B89A00D71518 /* EmployeeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5C22697B89A00D71518 /* EmployeeDetail.swift */; };
 		DA5EB5C42697B89A00D71518 /* EmployeeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5C22697B89A00D71518 /* EmployeeDetail.swift */; };
 		DA5EB5C62697D09F00D71518 /* EmployeeDetailsActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5C52697D09F00D71518 /* EmployeeDetailsActionsManager.swift */; };
 		DA5EB5C72697D09F00D71518 /* EmployeeDetailsActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5C52697D09F00D71518 /* EmployeeDetailsActionsManager.swift */; };
 		DA5EB5CB2697DF3900D71518 /* VMTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5CA2697DF3900D71518 /* VMTheme.swift */; };
 		DA5EB5CC2697DF3900D71518 /* VMTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5CA2697DF3900D71518 /* VMTheme.swift */; };
-		DA5EB5CE2697EEF700D71518 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5CD2697EEF700D71518 /* NetworkManager.swift */; };
 		DA5EB5D0269AFBFE00D71518 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9B2693C24E00D08F7B /* Employee.swift */; };
 		DA5EB5D1269AFBFF00D71518 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9B2693C24E00D08F7B /* Employee.swift */; };
 		DA5EB5D2269AFC0200D71518 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9D2693C26400D08F7B /* Room.swift */; };
 		DA5EB5D3269AFC0200D71518 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9D2693C26400D08F7B /* Room.swift */; };
-		DA5EB5D4269AFC1700D71518 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5CD2697EEF700D71518 /* NetworkManager.swift */; };
-		DA5EB5D5269AFC1700D71518 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5CD2697EEF700D71518 /* NetworkManager.swift */; };
 		DA5EB5DE269C8A9D00D71518 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5DA269C8A9D00D71518 /* Result.swift */; };
 		DA5EB5DF269C8A9D00D71518 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5DA269C8A9D00D71518 /* Result.swift */; };
 		DA5EB5E0269C8A9D00D71518 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5DB269C8A9D00D71518 /* Resource.swift */; };
@@ -56,6 +51,19 @@
 		DA5EB5E5269C8A9D00D71518 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5DD269C8A9D00D71518 /* API.swift */; };
 		DA5EB5E8269C8F1B00D71518 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5E7269C8F1B00D71518 /* Observable.swift */; };
 		DA5EB5E9269C8F1B00D71518 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EB5E7269C8F1B00D71518 /* Observable.swift */; };
+		DA6E16DE269C9BF30002E50D /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16DD269C9BF30002E50D /* ObservableTests.swift */; };
+		DA6E16E2269C9D900002E50D /* ResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16E0269C9D900002E50D /* ResourceTests.swift */; };
+		DA6E16E3269C9D900002E50D /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16E1269C9D900002E50D /* APITests.swift */; };
+		DA6E16EB269C9E010002E50D /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16E6269C9E010002E50D /* TestModel.swift */; };
+		DA6E16EC269C9E010002E50D /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16E7269C9E010002E50D /* MockURLSessionProtocol.swift */; };
+		DA6E16F2269CA0720002E50D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F1269CA0720002E50D /* ImageService.swift */; };
+		DA6E16F5269CA2F80002E50D /* DirectoryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F4269CA2F80002E50D /* DirectoryListService.swift */; };
+		DA6E16F6269CA2F80002E50D /* DirectoryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F4269CA2F80002E50D /* DirectoryListService.swift */; };
+		DA6E16F8269CA4700002E50D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F7269CA4700002E50D /* Constants.swift */; };
+		DA6E16FB269D05780002E50D /* RoomsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16FA269D05780002E50D /* RoomsListService.swift */; };
+		DA6E16FC269D05780002E50D /* RoomsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16FA269D05780002E50D /* RoomsListService.swift */; };
+		DA6E16FD269D0CB00002E50D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F7269CA4700002E50D /* Constants.swift */; };
+		DA6E16FE269D220E0002E50D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F1269CA0720002E50D /* ImageService.swift */; };
 		DA79EC9C2693C24E00D08F7B /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9B2693C24E00D08F7B /* Employee.swift */; };
 		DA79EC9E2693C26400D08F7B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9D2693C26400D08F7B /* Room.swift */; };
 		DA79ECA02693C31600D08F7B /* DirectoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9F2693C31600D08F7B /* DirectoryListViewModel.swift */; };
@@ -97,22 +105,29 @@
 		DA54E9C126939E0D001646B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5EB5A12693D01100D71518 /* RoomsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RoomsResponse.json; sourceTree = "<group>"; };
 		DA5EB5A62695141A00D71518 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
-		DA5EB5A92695149E00D71518 /* RoomsListViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListViewModal.swift; sourceTree = "<group>"; };
+		DA5EB5A92695149E00D71518 /* RoomsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListViewModel.swift; sourceTree = "<group>"; };
 		DA5EB5B0269522A800D71518 /* EmployeeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsTableViewController.swift; sourceTree = "<group>"; };
 		DA5EB5B32695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailNameAndPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		DA5EB5B42695258500D71518 /* EmployeeDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DA5EB5B92695273000D71518 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DA5EB5BC26952FEA00D71518 /* EmployeeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewModel.swift; sourceTree = "<group>"; };
-		DA5EB5BF2697B48E00D71518 /* UIImageView+ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageDownload.swift"; sourceTree = "<group>"; };
 		DA5EB5C22697B89A00D71518 /* EmployeeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetail.swift; sourceTree = "<group>"; };
 		DA5EB5C52697D09F00D71518 /* EmployeeDetailsActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsActionsManager.swift; sourceTree = "<group>"; };
 		DA5EB5CA2697DF3900D71518 /* VMTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMTheme.swift; sourceTree = "<group>"; };
-		DA5EB5CD2697EEF700D71518 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DA5EB5DA269C8A9D00D71518 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DA5EB5DB269C8A9D00D71518 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DA5EB5DC269C8A9D00D71518 /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		DA5EB5DD269C8A9D00D71518 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA5EB5E7269C8F1B00D71518 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DA6E16DD269C9BF30002E50D /* ObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
+		DA6E16E0269C9D900002E50D /* ResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTests.swift; sourceTree = "<group>"; };
+		DA6E16E1269C9D900002E50D /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		DA6E16E6269C9E010002E50D /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		DA6E16E7269C9E010002E50D /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		DA6E16F1269CA0720002E50D /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DA6E16F4269CA2F80002E50D /* DirectoryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListService.swift; sourceTree = "<group>"; };
+		DA6E16F7269CA4700002E50D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA6E16FA269D05780002E50D /* RoomsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListService.swift; sourceTree = "<group>"; };
 		DA79EC9B2693C24E00D08F7B /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		DA79EC9D2693C26400D08F7B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DA79EC9F2693C31600D08F7B /* DirectoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +182,7 @@
 		DA54E99C26939E0B001646B1 /* Directory */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E16F0269CA0610002E50D /* Services */,
 				DA5EB5E6269C8F0D00D71518 /* Helper */,
 				DA5EB5D9269C8A9D00D71518 /* API */,
 				DA5EB5C82697D29300D71518 /* Extensions */,
@@ -174,7 +190,6 @@
 				DA5EB5A526950E5A00D71518 /* Room List */,
 				DA5EB5A42693D22A00D71518 /* DirectoryList */,
 				DA79EC9A2693C1FD00D08F7B /* Models */,
-				DA5EB5CD2697EEF700D71518 /* NetworkManager.swift */,
 				DA54E99D26939E0B001646B1 /* AppDelegate.swift */,
 				DA54E99F26939E0B001646B1 /* SceneDelegate.swift */,
 				DA5EB5CA2697DF3900D71518 /* VMTheme.swift */,
@@ -190,6 +205,9 @@
 		DA54E9B326939E0D001646B1 /* DirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E16E5269C9E010002E50D /* Mocks */,
+				DA6E16E4269C9D990002E50D /* Helper */,
+				DA6E16DF269C9D900002E50D /* API */,
 				DA54E9B426939E0D001646B1 /* DirectoryTests.swift */,
 				DA54E9B626939E0D001646B1 /* Info.plist */,
 			);
@@ -218,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5EB5A62695141A00D71518 /* RoomListViewController.swift */,
-				DA5EB5A92695149E00D71518 /* RoomsListViewModal.swift */,
+				DA5EB5A92695149E00D71518 /* RoomsListViewModel.swift */,
 			);
 			path = "Room List";
 			sourceTree = "<group>";
@@ -239,7 +257,6 @@
 		DA5EB5C82697D29300D71518 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DA5EB5BF2697B48E00D71518 /* UIImageView+ImageDownload.swift */,
 				DA5EB5B92695273000D71518 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
@@ -262,16 +279,52 @@
 				DA5EB5DC269C8A9D00D71518 /* HTTPError.swift */,
 				DA5EB5DD269C8A9D00D71518 /* API.swift */,
 			);
-			name = API;
-			path = "../../../../Downloads/plp-test/ios-plp-starter-project/RetailApp/API";
+			path = API;
 			sourceTree = "<group>";
 		};
 		DA5EB5E6269C8F0D00D71518 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E16F7269CA4700002E50D /* Constants.swift */,
 				DA5EB5E7269C8F1B00D71518 /* Observable.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DA6E16DF269C9D900002E50D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E16E0269C9D900002E50D /* ResourceTests.swift */,
+				DA6E16E1269C9D900002E50D /* APITests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DA6E16E4269C9D990002E50D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E16DD269C9BF30002E50D /* ObservableTests.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DA6E16E5269C9E010002E50D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E16E6269C9E010002E50D /* TestModel.swift */,
+				DA6E16E7269C9E010002E50D /* MockURLSessionProtocol.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DA6E16F0269CA0610002E50D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E16F1269CA0720002E50D /* ImageService.swift */,
+				DA6E16F4269CA2F80002E50D /* DirectoryListService.swift */,
+				DA6E16FA269D05780002E50D /* RoomsListService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DA79EC9A2693C1FD00D08F7B /* Models */ = {
@@ -418,15 +471,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5EB5E4269C8A9D00D71518 /* API.swift in Sources */,
-				DA5EB5CE2697EEF700D71518 /* NetworkManager.swift in Sources */,
 				DA5EB5C62697D09F00D71518 /* EmployeeDetailsActionsManager.swift in Sources */,
 				DA5EB5DE269C8A9D00D71518 /* Result.swift in Sources */,
 				DA54E9A226939E0B001646B1 /* DirectoryListViewController.swift in Sources */,
+				DA6E16FB269D05780002E50D /* RoomsListService.swift in Sources */,
 				DA79EC9C2693C24E00D08F7B /* Employee.swift in Sources */,
+				DA6E16F5269CA2F80002E50D /* DirectoryListService.swift in Sources */,
+				DA6E16F8269CA4700002E50D /* Constants.swift in Sources */,
 				DA54E99E26939E0B001646B1 /* AppDelegate.swift in Sources */,
 				DA5EB5BD26952FEA00D71518 /* EmployeeDetailViewModel.swift in Sources */,
 				DA5EB5CB2697DF3900D71518 /* VMTheme.swift in Sources */,
-				DA5EB5C02697B48E00D71518 /* UIImageView+ImageDownload.swift in Sources */,
 				DA5EB5BA2695273000D71518 /* UIView+Constraints.swift in Sources */,
 				DA54E9A026939E0B001646B1 /* SceneDelegate.swift in Sources */,
 				DA5EB5C32697B89A00D71518 /* EmployeeDetail.swift in Sources */,
@@ -434,11 +488,12 @@
 				DA5EB5E0269C8A9D00D71518 /* Resource.swift in Sources */,
 				DA79ECA02693C31600D08F7B /* DirectoryListViewModel.swift in Sources */,
 				DA79EC9E2693C26400D08F7B /* Room.swift in Sources */,
+				DA6E16F2269CA0720002E50D /* ImageService.swift in Sources */,
 				DA5EB5E2269C8A9D00D71518 /* HTTPError.swift in Sources */,
 				DA5EB5B52695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift in Sources */,
 				DA5EB5B1269522A800D71518 /* EmployeeDetailsTableViewController.swift in Sources */,
 				DA5EB5B72695258500D71518 /* EmployeeDetailTableViewCell.swift in Sources */,
-				DA5EB5AA2695149E00D71518 /* RoomsListViewModal.swift in Sources */,
+				DA5EB5AA2695149E00D71518 /* RoomsListViewModel.swift in Sources */,
 				DA5EB5E8269C8F1B00D71518 /* Observable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,25 +503,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5EB5B82695258500D71518 /* EmployeeDetailTableViewCell.swift in Sources */,
+				DA6E16DE269C9BF30002E50D /* ObservableTests.swift in Sources */,
+				DA6E16FE269D220E0002E50D /* ImageService.swift in Sources */,
 				DA5EB5E5269C8A9D00D71518 /* API.swift in Sources */,
+				DA6E16EB269C9E010002E50D /* TestModel.swift in Sources */,
 				DA5EB5B2269522A800D71518 /* EmployeeDetailsTableViewController.swift in Sources */,
+				DA6E16FC269D05780002E50D /* RoomsListService.swift in Sources */,
 				DA5EB5D2269AFC0200D71518 /* Room.swift in Sources */,
 				DA5EB5C42697B89A00D71518 /* EmployeeDetail.swift in Sources */,
 				DA54E9B526939E0D001646B1 /* DirectoryTests.swift in Sources */,
 				DA5EB5BB2695273000D71518 /* UIView+Constraints.swift in Sources */,
 				DA5EB5DF269C8A9D00D71518 /* Result.swift in Sources */,
 				DA5EB5B62695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift in Sources */,
-				DA5EB5AB2695149E00D71518 /* RoomsListViewModal.swift in Sources */,
+				DA5EB5AB2695149E00D71518 /* RoomsListViewModel.swift in Sources */,
 				DA5EB5A82695141A00D71518 /* RoomListViewController.swift in Sources */,
 				DA5EB5E3269C8A9D00D71518 /* HTTPError.swift in Sources */,
-				DA5EB5C12697B48E00D71518 /* UIImageView+ImageDownload.swift in Sources */,
+				DA6E16E2269C9D900002E50D /* ResourceTests.swift in Sources */,
+				DA6E16F6269CA2F80002E50D /* DirectoryListService.swift in Sources */,
+				DA6E16EC269C9E010002E50D /* MockURLSessionProtocol.swift in Sources */,
 				DA5EB5D0269AFBFE00D71518 /* Employee.swift in Sources */,
 				DA5EB5BE26952FEA00D71518 /* EmployeeDetailViewModel.swift in Sources */,
-				DA5EB5D4269AFC1700D71518 /* NetworkManager.swift in Sources */,
+				DA6E16E3269C9D900002E50D /* APITests.swift in Sources */,
 				DA5EB5E9269C8F1B00D71518 /* Observable.swift in Sources */,
 				DA5EB5CC2697DF3900D71518 /* VMTheme.swift in Sources */,
 				DA5EB5C72697D09F00D71518 /* EmployeeDetailsActionsManager.swift in Sources */,
 				DA5EB5E1269C8A9D00D71518 /* Resource.swift in Sources */,
+				DA6E16FD269D0CB00002E50D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5EB5D5269AFC1700D71518 /* NetworkManager.swift in Sources */,
 				DA54E9C026939E0D001646B1 /* DirectoryUITests.swift in Sources */,
 				DA5EB5D1269AFBFF00D71518 /* Employee.swift in Sources */,
 				DA5EB5D3269AFC0200D71518 /* Room.swift in Sources */,
@@ -717,6 +778,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G385A2CHPU;
 				INFOPLIST_FILE = DirectoryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,6 +798,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G385A2CHPU;
 				INFOPLIST_FILE = DirectoryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

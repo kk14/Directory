@@ -11,14 +11,25 @@ import UIKit
 class EmployeeDetailsTableViewController: UITableViewController {
 
     var employeeDetailsVM: EmployeeDetailViewModel!
+    var employeeAvatarImage = UIImage(named: "person")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.register(EmployeeDetailNameAndPhotoTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailNameAndPhotoTableViewCell")
         self.tableView.register(EmployeeDetailTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailTableViewCell")
+        bind()
+    }
+    deinit {
+        employeeDetailsVM.employeeAvatarImage.unbind(self)
     }
 
+    private func bind() {
+        employeeDetailsVM.employeeAvatarImage.bind(self) { [weak self] employeeAvatarImage in
+            self?.employeeAvatarImage = employeeAvatarImage
+            self?.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.fade)
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +50,7 @@ class EmployeeDetailsTableViewController: UITableViewController {
             }
             employeeDetailNameAndPhotoTableViewCell.nameLabel.text = employeeDetailsVM.getName()
             employeeDetailNameAndPhotoTableViewCell.jobTitleLabel.text = employeeDetailsVM.getJobTitle()
-            employeeDetailNameAndPhotoTableViewCell.contactPhotoImageView.downloaded(from: employeeDetailsVM.getProfilePhotoURL())
+            employeeDetailNameAndPhotoTableViewCell.contactPhotoImageView.image = employeeAvatarImage
 
             return employeeDetailNameAndPhotoTableViewCell
         }
