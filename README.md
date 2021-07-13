@@ -4,14 +4,14 @@ iOS App developed for interview task
 
 ## Summary
 * Runs on both iOS and iPadOS
-* Tested on iPhone XR device ( as that's the only deviceI have got). But should work on all iOS and iPadOS devices
+* Tested on iPhone XR device ( as that's the only device I have got). But should work on all iOS and iPadOS devices
 
 ## GUI
 
-* Directory list and Details - gives the look and feel on native contacts app to keep as as imple as possiblr form users experience perspective.
-* Search bar comes on swipe of the list as standard. Currenlty allows searched by first and last name only. Can be extended to search by id etc.
+* Directory list and Details - gives the look and feel on native contacts app to keep as as simple as possible from users' experience perspective.
+* Search bar comes on swipe down of the list as standard. Currenlty allows searches by first and last name only. Can be extended to search by id etc.
 * Contact Detail page show Tappable actions on Phone (SMS & Call), Email (Mailto:) and Location (Apple Maps)
-* Rooms list - shows the available room with green blob icon and unavilabke rooms with red. Shows the occupancy on the right using standard Right Details Cell.
+* Rooms list - shows the available room with green blob icon and unavilable rooms with red. Shows the occupancy on the right using standard Right Details Cell.
 
 
 ## Test Coverage
@@ -28,4 +28,5 @@ iOS App developed for interview task
 ## Suggested improvements
 * UI - Can add filter on Rooms list to get a filtered list of available rooms
 * UI - search can be expanded to search by ID and other attributes
+* UI - Save searches and show it as type suggestions on search
 * Code - Further refactoring required to move few display logic to view models
