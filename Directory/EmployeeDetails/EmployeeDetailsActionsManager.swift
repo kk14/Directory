@@ -5,13 +5,12 @@
 //  Created by Kanishk Kumar on 09/07/2021.
 //
 
-import MapKit
 import CoreLocation
+import MapKit
 import MessageUI
 
 extension EmployeeDetailsTableViewController {
-    
-     func showActionSheetForNumber(withEmployeeDetail employeeDetail: EmployeeDetail) {
+    func showActionSheetForNumber(withEmployeeDetail employeeDetail: EmployeeDetail) {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ -> Void in
@@ -29,7 +28,7 @@ extension EmployeeDetailsTableViewController {
         }
         actionSheetController.addAction(messageAction)
 
-        self.present(actionSheetController, animated: true, completion: nil)
+        present(actionSheetController, animated: true, completion: nil)
     }
 
     func callContact(withNumber number: String) {
@@ -42,15 +41,16 @@ extension EmployeeDetailsTableViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-    func showAppleMaps(withEmployee employee:Employee) {
+
+    func showAppleMaps(withEmployee employee: Employee) {
         let latitude: CLLocationDegrees = employee.latitude
         let longitude: CLLocationDegrees = employee.longitude
-        let regionDistance:CLLocationDistance = 10000
+        let regionDistance: CLLocationDistance = 10000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span),
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
@@ -58,12 +58,11 @@ extension EmployeeDetailsTableViewController {
         mapItem.openInMaps(launchOptions: options)
     }
 }
+
 // MARK: - Send Message
 
 extension EmployeeDetailsTableViewController: MFMessageComposeViewControllerDelegate {
-
     private func sendMessage(toNumber number: String) {
-        
         if MFMessageComposeViewController.canSendText() {
             let formatedNumber = number.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
 
@@ -72,7 +71,7 @@ extension EmployeeDetailsTableViewController: MFMessageComposeViewControllerDele
             let messageVC = MFMessageComposeViewController()
             messageVC.recipients = [formatedNumber]
             messageVC.messageComposeDelegate = self
-            self.present(messageVC, animated: true, completion: nil)
+            present(messageVC, animated: true, completion: nil)
         }
     }
 
@@ -92,11 +91,9 @@ extension EmployeeDetailsTableViewController: MFMessageComposeViewControllerDele
     }
 }
 
-
 // MARK: - Send Email
 
 extension EmployeeDetailsTableViewController: MFMailComposeViewControllerDelegate {
-
     func sendEmail(toEmailAddress emailAddress: String) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()

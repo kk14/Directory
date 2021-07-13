@@ -1,3 +1,10 @@
+//
+//  TestModel.swift
+//  Directory
+//
+//  Created by Kanishk Kumar on 05/07/2021.
+//
+
 import Foundation
 
 struct TestModel: Decodable, Equatable {

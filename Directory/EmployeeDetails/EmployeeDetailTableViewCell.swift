@@ -8,7 +8,6 @@
 import UIKit
 
 class EmployeeDetailTableViewCell: UITableViewCell {
-
     let detailNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
@@ -38,8 +37,8 @@ class EmployeeDetailTableViewCell: UITableViewCell {
     }
 
     func addSubviews() {
-        self.addSubview(detailNameLabel)
-        self.addSubview(detailValueLabel)
+        addSubview(detailNameLabel)
+        addSubview(detailValueLabel)
     }
 
     func addConstraintToViews() {
@@ -51,5 +50,4 @@ class EmployeeDetailTableViewCell: UITableViewCell {
         detailValueLabelHeightAnchorContraint = detailValueLabel.heightAnchor.constraint(equalToConstant: 40)
         detailValueLabelHeightAnchorContraint.isActive = true
     }
-
 }

@@ -102,6 +102,9 @@ class DirectoryListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isFiltering {
+          return nil
+        }
         return employeeSectionTitles[section]
     }
 

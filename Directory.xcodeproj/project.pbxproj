@@ -13,7 +13,6 @@
 		DA54E9A526939E0B001646B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA54E9A326939E0B001646B1 /* Main.storyboard */; };
 		DA54E9A726939E0D001646B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA54E9A626939E0D001646B1 /* Assets.xcassets */; };
 		DA54E9AA26939E0D001646B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA54E9A826939E0D001646B1 /* LaunchScreen.storyboard */; };
-		DA54E9B526939E0D001646B1 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E9B426939E0D001646B1 /* DirectoryTests.swift */; };
 		DA54E9C026939E0D001646B1 /* DirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E9BF26939E0D001646B1 /* DirectoryUITests.swift */; };
 		DA5EB5A22693D01100D71518 /* RoomsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5EB5A12693D01100D71518 /* RoomsResponse.json */; };
 		DA5EB5A32693D01100D71518 /* RoomsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5EB5A12693D01100D71518 /* RoomsResponse.json */; };
@@ -103,7 +102,6 @@
 		DA54E9A926939E0D001646B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA54E9AB26939E0D001646B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA54E9B026939E0D001646B1 /* DirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA54E9B426939E0D001646B1 /* DirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		DA54E9B626939E0D001646B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA54E9BB26939E0D001646B1 /* DirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA54E9BF26939E0D001646B1 /* DirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryUITests.swift; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 				DA6E16E5269C9E010002E50D /* Mocks */,
 				DA6E16E4269C9D990002E50D /* Helper */,
 				DA6E16DF269C9D900002E50D /* API */,
-				DA54E9B426939E0D001646B1 /* DirectoryTests.swift */,
 				DA54E9B626939E0D001646B1 /* Info.plist */,
 			);
 			path = DirectoryTests;
@@ -542,7 +539,6 @@
 				DA6E170C269D3D7D0002E50D /* MockRoomListService.swift in Sources */,
 				DA5EB5D2269AFC0200D71518 /* Room.swift in Sources */,
 				DA5EB5C42697B89A00D71518 /* EmployeeDetail.swift in Sources */,
-				DA54E9B526939E0D001646B1 /* DirectoryTests.swift in Sources */,
 				DA5EB5BB2695273000D71518 /* UIView+Constraints.swift in Sources */,
 				DA5EB5DF269C8A9D00D71518 /* Result.swift in Sources */,
 				DA5EB5B62695258500D71518 /* EmployeeDetailNameAndPhotoTableViewCell.swift in Sources */,
@@ -771,6 +767,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G385A2CHPU;
 				INFOPLIST_FILE = DirectoryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -792,6 +789,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G385A2CHPU;
 				INFOPLIST_FILE = DirectoryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (

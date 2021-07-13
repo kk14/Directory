@@ -8,7 +8,6 @@
 import UIKit
 
 class EmployeeDetailNameAndPhotoTableViewCell: UITableViewCell {
-
     let contactPhotoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
@@ -44,9 +43,9 @@ class EmployeeDetailNameAndPhotoTableViewCell: UITableViewCell {
     }
 
     func addSubviews() {
-        self.addSubview(contactPhotoImageView)
-        self.addSubview(nameLabel)
-        self.addSubview(jobTitleLabel)
+        addSubview(contactPhotoImageView)
+        addSubview(nameLabel)
+        addSubview(jobTitleLabel)
     }
 
     func addConstraintToViews() {
@@ -57,5 +56,4 @@ class EmployeeDetailNameAndPhotoTableViewCell: UITableViewCell {
 
         jobTitleLabel.setAnchorsWithConstants(topAnchor: nameLabel.bottomAnchor, paddingTop: 4, leadingAnchor: leadingAnchor, trailingAnchor: trailingAnchor, height: 20)
     }
-
 }

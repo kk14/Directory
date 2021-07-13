@@ -7,19 +7,18 @@
 
 import UIKit
 
-
 class EmployeeDetailsTableViewController: UITableViewController {
-
     var employeeDetailsVM: EmployeeDetailViewModel!
     var employeeAvatarImage = UIImage(named: "person")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(EmployeeDetailNameAndPhotoTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailNameAndPhotoTableViewCell")
-        self.tableView.register(EmployeeDetailTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailTableViewCell")
+        tableView.register(EmployeeDetailNameAndPhotoTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailNameAndPhotoTableViewCell")
+        tableView.register(EmployeeDetailTableViewCell.self, forCellReuseIdentifier: "EmployeeDetailTableViewCell")
         bind()
     }
+
     deinit {
         employeeDetailsVM.employeeAvatarImage.unbind(self)
     }
@@ -30,6 +29,7 @@ class EmployeeDetailsTableViewController: UITableViewController {
             self?.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.fade)
         }
     }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,9 +41,7 @@ class EmployeeDetailsTableViewController: UITableViewController {
         return employeeDetailsVM.getEmployeeDetailsCount() + 1
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0 {
             guard let employeeDetailNameAndPhotoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeDetailNameAndPhotoTableViewCell", for: indexPath) as? EmployeeDetailNameAndPhotoTableViewCell else {
                 return UITableViewCell()
@@ -64,10 +62,8 @@ class EmployeeDetailsTableViewController: UITableViewController {
         employeeDetailTableViewCell.detailValueLabel.text = employeeDetail.detailValue
         return employeeDetailTableViewCell
     }
-   
 
-
-// MARK: - TableView Delegate events
+    // MARK: - TableView Delegate events
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
@@ -90,11 +86,8 @@ class EmployeeDetailsTableViewController: UITableViewController {
             showActionSheetForNumber(withEmployeeDetail: employeeDetail)
         } else if employeeDetail.detailType == .email {
             sendEmail(toEmailAddress: employeeDetail.detailValue)
-        }
-        else if employeeDetail.detailType == .location {
-            showAppleMaps(withEmployee:employeeDetailsVM.employee)
+        } else if employeeDetail.detailType == .location {
+            showAppleMaps(withEmployee: employeeDetailsVM.employee)
         }
     }
-    
-    
 }
