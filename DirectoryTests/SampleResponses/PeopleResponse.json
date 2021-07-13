@@ -1,0 +1,28 @@
+[
+ {
+    "avatar": "https://randomuser.me/api/portraits/women/13.jpg",
+    "phone": "(927) 840-0095 x2527",
+    "firstName": "Maybell",
+    "id": "1",
+    "longitude": 139.6922,
+    "favouriteColor": "#122a33",
+    "email": "Izaiah.Little@hotmail.com",
+    "jobTitle": "Customer Markets Architect",
+    "createdAt": "2020-12-14T11:24:20.999Z",
+    "latitude": 35.6897,
+    "lastName": "Durgan"
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
+    "phone": "1-131-406-0959",
+    "firstName": "Mylene",
+    "id": "2",
+    "longitude": 106.8451,
+    "favouriteColor": "#7b4254",
+    "email": "Candida.Bode4@yahoo.com",
+    "jobTitle": "National Creative Planner",
+    "createdAt": "2020-12-13T16:29:22.176Z",
+    "latitude": -6.2146,
+    "lastName": "Brekke"
+  }
+]

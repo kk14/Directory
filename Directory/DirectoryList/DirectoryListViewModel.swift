@@ -20,11 +20,12 @@ class DirectoryListViewModel {
         updateObservables(employees: value)
       }
     }
-    init() {
-        self.directoryListService = DirectoryListServiceImplementation(api: API(urlSession: URLSession(configuration: URLSessionConfiguration.default), baseURL: URL(string: APPURL.interviewTest)!))
-        self.employeeDictionary = Observable<Dictionary<String, [Employee]>>(["howdy":[]])
+    init(directoryListService: DirectoryListService?) {
+        self.directoryListService = directoryListService ?? DirectoryListServiceImplementation(api: API(urlSession: URLSession(configuration: URLSessionConfiguration.default), baseURL: URL(string: APPURL.interviewTest)!))
+        self.employeeDictionary = Observable<Dictionary<String, [Employee]>>(["a":[]])
         getDirectoryList()
     }
+    
     
     private func updateObservables(employees: [Employee]) {
         employeeDictionary.value = self.getEmployeeDictionary()

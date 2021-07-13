@@ -16,7 +16,7 @@ class RoomListViewController: UITableViewController {
         super.viewDidLoad()
         tableView.sectionIndexColor = .vmRed
 
-        roomsListViewModal = RoomsListViewModel()
+        roomsListViewModal = RoomsListViewModel(roomsListService: nil)
         bind()
     }
 
@@ -56,12 +56,7 @@ class RoomListViewController: UITableViewController {
         let roomKey = roomSectionTitles[indexPath.section]
         if let roomValues = roomsDictionary[roomKey] {
             cell.textLabel?.text = roomValues[indexPath.row].name
-            if #available(iOS 13.0, *) {
-                cell.imageView?.image = roomValues[indexPath.row].isOccupied ? UIImage(systemName: "circle.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal) : UIImage(systemName: "circle.fill")?.withTintColor(.green, renderingMode: .alwaysOriginal)
-            } else {
-                // Fallback on earlier versions
-                // FIXME:
-            }
+            cell.imageView?.image = roomValues[indexPath.row].isOccupied ? UIImage(named: "circle-filled-red") :  UIImage(named: "circle-filled-green")
             cell.detailTextLabel?.text = "\(roomValues[indexPath.row].maxOccupancy)"
         }
 

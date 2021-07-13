@@ -64,6 +64,11 @@
 		DA6E16FC269D05780002E50D /* RoomsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16FA269D05780002E50D /* RoomsListService.swift */; };
 		DA6E16FD269D0CB00002E50D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F7269CA4700002E50D /* Constants.swift */; };
 		DA6E16FE269D220E0002E50D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E16F1269CA0720002E50D /* ImageService.swift */; };
+		DA6E1704269D26560002E50D /* DirectoryListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1703269D26560002E50D /* DirectoryListViewModelTests.swift */; };
+		DA6E1706269D27010002E50D /* MockDirectoryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1705269D27010002E50D /* MockDirectoryListService.swift */; };
+		DA6E1707269D3B9E0002E50D /* DirectoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9F2693C31600D08F7B /* DirectoryListViewModel.swift */; };
+		DA6E170A269D3CC50002E50D /* RoomsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1709269D3CC50002E50D /* RoomsListViewModelTests.swift */; };
+		DA6E170C269D3D7D0002E50D /* MockRoomListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E170B269D3D7D0002E50D /* MockRoomListService.swift */; };
 		DA79EC9C2693C24E00D08F7B /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9B2693C24E00D08F7B /* Employee.swift */; };
 		DA79EC9E2693C26400D08F7B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9D2693C26400D08F7B /* Room.swift */; };
 		DA79ECA02693C31600D08F7B /* DirectoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79EC9F2693C31600D08F7B /* DirectoryListViewModel.swift */; };
@@ -128,6 +133,10 @@
 		DA6E16F4269CA2F80002E50D /* DirectoryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListService.swift; sourceTree = "<group>"; };
 		DA6E16F7269CA4700002E50D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA6E16FA269D05780002E50D /* RoomsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListService.swift; sourceTree = "<group>"; };
+		DA6E1703269D26560002E50D /* DirectoryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListViewModelTests.swift; sourceTree = "<group>"; };
+		DA6E1705269D27010002E50D /* MockDirectoryListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDirectoryListService.swift; sourceTree = "<group>"; };
+		DA6E1709269D3CC50002E50D /* RoomsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListViewModelTests.swift; sourceTree = "<group>"; };
+		DA6E170B269D3D7D0002E50D /* MockRoomListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomListService.swift; sourceTree = "<group>"; };
 		DA79EC9B2693C24E00D08F7B /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		DA79EC9D2693C26400D08F7B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DA79EC9F2693C31600D08F7B /* DirectoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListViewModel.swift; sourceTree = "<group>"; };
@@ -188,7 +197,7 @@
 				DA5EB5C82697D29300D71518 /* Extensions */,
 				DA5EB5A42693D22A00D71518 /* DirectoryList */,
 				DA5EB5AC2695212500D71518 /* EmployeeDetails */,
-				DA5EB5A526950E5A00D71518 /* Room List */,
+				DA5EB5A526950E5A00D71518 /* RoomList */,
 				DA79EC9A2693C1FD00D08F7B /* Models */,
 				DA54E99D26939E0B001646B1 /* AppDelegate.swift */,
 				DA54E99F26939E0B001646B1 /* SceneDelegate.swift */,
@@ -197,7 +206,6 @@
 				DA54E9A626939E0D001646B1 /* Assets.xcassets */,
 				DA54E9A826939E0D001646B1 /* LaunchScreen.storyboard */,
 				DA54E9AB26939E0D001646B1 /* Info.plist */,
-				DA5EB5C92697D2B000D71518 /* Resources */,
 			);
 			path = Directory;
 			sourceTree = "<group>";
@@ -205,6 +213,9 @@
 		DA54E9B326939E0D001646B1 /* DirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA5EB5C92697D2B000D71518 /* SampleResponses */,
+				DA6E1708269D3C840002E50D /* RoomList */,
+				DA6E16FF269D25A80002E50D /* DirectoryList */,
 				DA6E16E5269C9E010002E50D /* Mocks */,
 				DA6E16E4269C9D990002E50D /* Helper */,
 				DA6E16DF269C9D900002E50D /* API */,
@@ -232,13 +243,13 @@
 			path = DirectoryList;
 			sourceTree = "<group>";
 		};
-		DA5EB5A526950E5A00D71518 /* Room List */ = {
+		DA5EB5A526950E5A00D71518 /* RoomList */ = {
 			isa = PBXGroup;
 			children = (
 				DA5EB5A62695141A00D71518 /* RoomListViewController.swift */,
 				DA5EB5A92695149E00D71518 /* RoomsListViewModel.swift */,
 			);
-			path = "Room List";
+			path = RoomList;
 			sourceTree = "<group>";
 		};
 		DA5EB5AC2695212500D71518 /* EmployeeDetails */ = {
@@ -262,13 +273,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DA5EB5C92697D2B000D71518 /* Resources */ = {
+		DA5EB5C92697D2B000D71518 /* SampleResponses */ = {
 			isa = PBXGroup;
 			children = (
 				DA79ECA12693C46A00D08F7B /* PeopleResponse.json */,
 				DA5EB5A12693D01100D71518 /* RoomsResponse.json */,
 			);
-			path = Resources;
+			path = SampleResponses;
 			sourceTree = "<group>";
 		};
 		DA5EB5D9269C8A9D00D71518 /* API */ = {
@@ -311,6 +322,8 @@
 		DA6E16E5269C9E010002E50D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E1705269D27010002E50D /* MockDirectoryListService.swift */,
+				DA6E170B269D3D7D0002E50D /* MockRoomListService.swift */,
 				DA6E16E6269C9E010002E50D /* TestModel.swift */,
 				DA6E16E7269C9E010002E50D /* MockURLSessionProtocol.swift */,
 			);
@@ -325,6 +338,22 @@
 				DA6E16FA269D05780002E50D /* RoomsListService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DA6E16FF269D25A80002E50D /* DirectoryList */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1703269D26560002E50D /* DirectoryListViewModelTests.swift */,
+			);
+			path = DirectoryList;
+			sourceTree = "<group>";
+		};
+		DA6E1708269D3C840002E50D /* RoomList */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1709269D3CC50002E50D /* RoomsListViewModelTests.swift */,
+			);
+			path = RoomList;
 			sourceTree = "<group>";
 		};
 		DA79EC9A2693C1FD00D08F7B /* Models */ = {
@@ -506,9 +535,11 @@
 				DA6E16DE269C9BF30002E50D /* ObservableTests.swift in Sources */,
 				DA6E16FE269D220E0002E50D /* ImageService.swift in Sources */,
 				DA5EB5E5269C8A9D00D71518 /* API.swift in Sources */,
+				DA6E1707269D3B9E0002E50D /* DirectoryListViewModel.swift in Sources */,
 				DA6E16EB269C9E010002E50D /* TestModel.swift in Sources */,
 				DA5EB5B2269522A800D71518 /* EmployeeDetailsTableViewController.swift in Sources */,
 				DA6E16FC269D05780002E50D /* RoomsListService.swift in Sources */,
+				DA6E170C269D3D7D0002E50D /* MockRoomListService.swift in Sources */,
 				DA5EB5D2269AFC0200D71518 /* Room.swift in Sources */,
 				DA5EB5C42697B89A00D71518 /* EmployeeDetail.swift in Sources */,
 				DA54E9B526939E0D001646B1 /* DirectoryTests.swift in Sources */,
@@ -518,13 +549,16 @@
 				DA5EB5AB2695149E00D71518 /* RoomsListViewModel.swift in Sources */,
 				DA5EB5A82695141A00D71518 /* RoomListViewController.swift in Sources */,
 				DA5EB5E3269C8A9D00D71518 /* HTTPError.swift in Sources */,
+				DA6E1704269D26560002E50D /* DirectoryListViewModelTests.swift in Sources */,
 				DA6E16E2269C9D900002E50D /* ResourceTests.swift in Sources */,
 				DA6E16F6269CA2F80002E50D /* DirectoryListService.swift in Sources */,
 				DA6E16EC269C9E010002E50D /* MockURLSessionProtocol.swift in Sources */,
 				DA5EB5D0269AFBFE00D71518 /* Employee.swift in Sources */,
 				DA5EB5BE26952FEA00D71518 /* EmployeeDetailViewModel.swift in Sources */,
 				DA6E16E3269C9D900002E50D /* APITests.swift in Sources */,
+				DA6E170A269D3CC50002E50D /* RoomsListViewModelTests.swift in Sources */,
 				DA5EB5E9269C8F1B00D71518 /* Observable.swift in Sources */,
+				DA6E1706269D27010002E50D /* MockDirectoryListService.swift in Sources */,
 				DA5EB5CC2697DF3900D71518 /* VMTheme.swift in Sources */,
 				DA5EB5C72697D09F00D71518 /* EmployeeDetailsActionsManager.swift in Sources */,
 				DA5EB5E1269C8A9D00D71518 /* Resource.swift in Sources */,

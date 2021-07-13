@@ -21,7 +21,7 @@ class DirectoryListViewController: UITableViewController {
         self.configureSearchController()
         tableView.sectionIndexColor = .vmRed
         
-        self.directoryListViewModel = DirectoryListViewModel()
+        self.directoryListViewModel = DirectoryListViewModel(directoryListService: nil)
         bind()
     }
     deinit {

@@ -21,9 +21,9 @@ class RoomsListViewModel {
         }
     }
 
-    init() {
-        roomsListService = RoomsListServiceImplementation(api: API(urlSession: URLSession(configuration: URLSessionConfiguration.default), baseURL: URL(string: APPURL.interviewTest)!))
-        roomsDictionary = Observable<Dictionary<String, [Room]>>(["howdy": []])
+    init(roomsListService: RoomsListService?) {
+        self.roomsListService = roomsListService ?? RoomsListServiceImplementation(api: API(urlSession: URLSession(configuration: URLSessionConfiguration.default), baseURL: URL(string: APPURL.interviewTest)!))
+        roomsDictionary = Observable<Dictionary<String, [Room]>>(["": []])
         getRoomList()
     }
 
